@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SiteHosting | Free Plan</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="shortcut icon" href="./img/icon.ico">
+	<link rel="apple-touch-icon" href="./img/icon.png">
+</head>
+<body>
+	<header>
+	<div class="container">
+	<div id="branding">  
+	<h1><span class="highlight">Site</span>Hosting</h1>	
+	</div>	
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/getstarted">Get Started</a></li>
+			<li><a href="/support">Support</a></li>
+		</ul>
+		
+	</nav>
+	</div>
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> 
+    </script> 
+  
+    <script> 
+        /* Add "https://api.ipify.org?format=json" statement 
+           this will communicate with the ipify servers in 
+           order to retrieve the IP address $.getJSON will 
+           load JSON-encoded data from the server using a 
+           GET HTTP request */ 
+  
+        $.getJSON("https://api.ipify.org?format=json", 
+                                          function(data) { 
+  
+            // Setting text of element P with id gfg 
+            $("#gfg").html(data.ip); 
+        }) 
+    </script> 
+	</header>
+	<div class="form-background">
+	<div class="terms">
+	<p>By continuing, you agree to <a href="terms.txt">these terms</a></p>
+	</div>
+	<div class="signup">
+	<form name="free-signup" data-netlify-recaptcha="true" netlify>
+	<input type="text" name="Name" placeholder="Name"><br>
+	<br>
+
+	<input type="email" name="email" placeholder="Email">	
+	<p>Upload Homepage:</p>
+	<input type="file" name="index.html" placeholder="Upload Homepage">
+	<p>Upload Second Page:</p>
+	<input type="file" name="second page" placeholder="Upload Second Page">
+	<p>Upload Third Page:</p>
+	<input type="file" name="third page" placeholder="Upload Third Page">
+	<p>Upload an Image:</p>
+	<input type="file" name="img" placeholder="Upload Image"><br>
+	<br>
+	<div data-netlify-recaptcha="true"></div>
+	<button type="submit" class="button1">Submit</button>
+	<p>For security reasons, your IP address;<p id="gfg"></p>is being recorded.</p>
+	
+	</form>
+</div>
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBwy1vl65Ol71oAzNVIFe59TzTC6MWEn7Q",
+    authDomain: "sitehosting-8207b.firebaseapp.com",
+    databaseURL: "https://sitehosting-8207b.firebaseio.com",
+    projectId: "sitehosting-8207b",
+    storageBucket: "sitehosting-8207b.appspot.com",
+    messagingSenderId: "284499121936",
+    appId: "1:284499121936:web:be6422afdb100723193795"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+
+</body>
+</html>
